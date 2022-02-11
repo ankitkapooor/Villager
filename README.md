@@ -4,7 +4,7 @@ Villager a chabot made on top of a distilled version of **[GPT-2](https://openai
 
  Villager implements a part of natural language processing called **NLG**, which is Natural Language Generation. As opposed to the conventional method where the bot looks into a text file with pre-stored replies for a set of expected questions, The bot generates its own replies based on the context of the question asked by the user.
 
- [chat1]("assets/ss1.png")
+ ![chat1](assets/ss1.png)
 
  The code is split into 5 scripts:
  * **dataset_preparation.py**
@@ -44,7 +44,8 @@ Villager a chabot made on top of a distilled version of **[GPT-2](https://openai
 
 !git clone https://github.com/huggingface/transformers;
 !cd transformers; pip3 install .
-#The distilled gpt-2 model comes from the huggingface repository using the transformers library. This section of the code imports transformers.
+#The distilled gpt-2 model comes from the huggingface repository using the transformers library. 
+#This section of the code imports transformers.
 
 !bash run_experiments.sh
 #The following bash file trains the model over 4 epochs and makes checkpoints every 500 steps.
