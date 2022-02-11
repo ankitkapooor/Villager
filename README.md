@@ -44,7 +44,7 @@ Villager a chabot made on top of a distilled version of **[GPT-2](https://openai
 
 !git clone https://github.com/huggingface/transformers;
 !cd transformers; pip3 install .
-#The distilled gpt-2 model comes from the huggingface repository using the transformers library. 
+#The distilled gpt-2 model comes from the huggingface repository using the transformers library.
 #This section of the code imports transformers.
 
 !bash run_experiments.sh
@@ -57,7 +57,7 @@ Villager a chabot made on top of a distilled version of **[GPT-2](https://openai
 #run_experiments.sh
 
 mkdir experiments
-for epoch in 1
+for epoch in 4
 do
 	python run_lm_finetuning.py \
 	--model_name_or_path distilgpt2 \
@@ -128,4 +128,13 @@ User: how often do you go to the church?
 Villager#9524:  Every year I do it's mostly for the sacrament for me to be in and out. It's a really nice thing to be able to have a small congregation.
 ~~~
 
-The bot is named Villager as a gag after the Minecraft Villagers who only speak gibberish. This model is trained on a tiny one dimensional dataset for only 4 epochs but shows a proof of concept of such bots being capable of industry specific use in the future. 
+The bot is named Villager as a gag after the Minecraft Villagers who only speak gibberish. This model is trained on a tiny one dimensional dataset for only 4 epochs but shows a proof of concept of such bots being capable of industry specific use in the future.
+
+To run the bot locally, the following dependencies and libraries are required:
+* tensorflow
+* PyTorch
+* transformers (from HuggingFace)
+* pandas
+* discord
+
+The **pytorch_model.bin** file containing the trained model isn't in the repository because of it's size. A link to download it is given in the **Models/epochs_4/model.txt** file. To run it locally, download the model and save it in the same directory. Alternatively, run the **model_train.ipybn** file on Google Colab and a downloadable model will be trained in roughly 1.5 hours.

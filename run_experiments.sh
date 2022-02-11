@@ -1,6 +1,6 @@
 mkdir experiments
 
-for epoch in 1
+for epoch in 4
 do
 	python run_lm_finetuning.py \
 	--model_name_or_path distilgpt2 \
