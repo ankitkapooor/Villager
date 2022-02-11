@@ -1,0 +1,2 @@
+# Villager
+Villager a chabot made on top of a distilled version of GPT-2 by using the HuggingFace Repository. The bot is trained on the open source dataset, Topical-Chat Repository made available by Amazon. Villager has been trained on roughly 45,000 total back-and-forth conversations. Villager is a step above an average conversational chabot as it generates its own replies just by reading what the user says to it. This bot is a step taken in my thesis research in the field of NLP and NLG.
