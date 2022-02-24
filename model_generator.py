@@ -1,8 +1,12 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import random
 
-tokenizer = AutoTokenizer.from_pretrained('Models/epochs_4/')
-model = AutoModelForCausalLM.from_pretrained('Models/epochs_4/')
+#tokenizer = AutoTokenizer.from_pretrained('Models/epochs_4/')
+#model = AutoModelForCausalLM.from_pretrained('Models/epochs_4/')
+
+tokenizer = AutoTokenizer.from_pretrained('Models/20K_steps/')
+model = AutoModelForCausalLM.from_pretrained('Models/20K_steps/')
+
 special_token = '<|endoftext|>'
 
 class Generator:
