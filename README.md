@@ -66,12 +66,14 @@ do
 	--output_dir experiments/epochs_$epoch \
 	--do_train \
 	--per_device_train_batch_size 2 \
-  --overwrite_output_dir \
+    --overwrite_output_dir \
 	--num_train_epochs $epoch
 done
 ~~~
 
 This creates our final trained model which is stored in **Models/epochs_4/**. The next file, **model_generator.py** uses the transformers package on this dataset to implement the model for our purposes.
+
+Additionally, the number of epochs can be increased based on system performance and the model can be improved. the folder **Models/20K_steps/** houses another freshly trained **model_generator.py** which was trained for 20,000 steps (roughly 8 epochs).
 
 ~~~python
 #model_generator.py
